@@ -7,6 +7,7 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	font-family: 'Montserrat', sans-serif;
 }
 
 *:focus {
@@ -15,28 +16,142 @@
 }
 
 body {
-	font-family: 'Montserrat', sans-serif;
+	height: 100vh;
 	overflow: hidden;
 	cursor: pointer;
 	background: #31363b;
-}
-
-.nav {
-	height: 70px;
-	background: #232629;
-	padding: 5px 15px 5px 15px;
 	display: flex;
 	flex-direction: row;
-	gap: 15px;
+	flex-wrap: wrap;
+}
+
+.title {
+	height: 10%;
+	width: 100%;
+	background: #232629;
+	font-size: 50px;
+	font-weight: bold;
+	color: #cef8fa;
+	padding: 5px 10px 5px 10px;
+}
+
+.menu {
+	height: 100vh;
+	width: 20%;
+	background: #232629;
+}
+
+.menu ul {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.menu ul li {
+	position: relative;
+	list-style: none;
+}
+
+.menu ul li::before {
+	position: absolute;
+	content: '';
+	top: 32px;
+	right: 10px;
+	width: 15px;
+	height: 15px;
+	background: #cef8fa;
+	border-radius: 50%;
+	transition: 0.5s;
+}
+
+.menu ul li:hover::before {
+	background: pink;
+}
+
+.menu ul li a {
+	text-decoration: none;
+	text-transform: capitalize;
+	display: flex;
+}
+
+.menu ul li a .icon {
+	width: 80px;
+	height: 65px;
+	text-align: center;
+	/* overflow: hidden; */
+	margin: 10px;
+}
+
+.menu ul li a .icon .bi {
+	width: 100%;
+	height: 100%;
+	line-height: 65px;
+	font-size: 42px;
+	color: #cef8fa;
+	transition: 0.5s;
+}
+
+.menu ul li a:hover .icon .bi {
+	color: pink;
+}
+
+.menu ul li a .name {
+	position: relative;
+	height: 35px;
+	width: 100%;
+	display: block;
+	top: 25px;
+}
+
+.menu ul li a .name span {
+	display: block;
+	position: relative;
+	font-weight: 500;
+	font-size: 35px;
+	line-height: 35px;
+	color: #cef8fa;
+	transition: 0.5s;
+}
+
+.menu ul li a:hover .name span {
+	color: pink;
+}
+
+.content {
+	padding: 30px 50px 30px 50px;
+	width: 80%;
+	height: 90%;
+}
+
+.content .embed {
+	width: 100%;
+	height: 100%;
+}
+
+.content .embed--hidden {
+	display: none;
+}
+
+.content .main {
+	display: flex;
+	justify-content: center;
 	align-items: center;
+	gap: 50px;
 }
 
-.nav--logo {
-	border-radius: 5px;
-	width: 60px;
+.content .main iframe {
+	height: 650px;
+	width: 350px;
+	border: 0px;
+	border-radius: 8px;
 }
 
-.nav--img {
-	width: 60px;
-	height: 60px;
+.content .main img {
+	max-width: 50%;
+	max-height: 650px;
+	border-radius: 8px;
+}
+
+.content .main--hidden {
+	display: none;
 }
