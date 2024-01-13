@@ -1,0 +1,97 @@
+@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
+
+* {
+	font-family: 'Fira Code', monospace;
+}
+
+@supports (font-variation-settings: normal) {
+	code {
+		font-family: 'Fira Code VF', monospace;
+	}
+}
+
+body {
+	background-color: #2b2a33;
+	margin: 0 auto;
+	display: flex;
+}
+
+nav {
+	background-color: #161b22;
+	color: #fff;
+	height: 100vh;
+	overflow: auto;
+	padding: 0 15px 0 15px;
+	text-transform: capitalize;
+	width: 15%;
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+nav li a {
+	display: block;
+	color: #eee;
+	padding: 10px 15px;
+	text-decoration: none;
+	font-size: 175%;
+}
+
+nav li a:hover {
+	background-color: #2b2a33;
+	color: #FF91A4;
+}
+
+nav li i{
+	margin: 0 5px 0 0;
+}
+
+.main {
+	height: 100vh;
+	width: 85%;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.about p{
+	padding: 10px;
+	margin: 10px;
+	color: #FF91A4;
+	font-size: x-large;
+}
+
+.links ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+  }
+  
+  .links  li {
+	display: grid;
+	margin-top: 20px;
+  }
+  
+  .links  a {
+	padding: 10px;
+	text-decoration: none;
+	color: #161b22;
+	background-color: #eee;
+	border-radius: 5px;
+	font-size: 175%;
+  }
+  
+  .links a:hover {
+	/* background-color: #ccc; */
+	background-color: #161b22;
+	color: #fff;
+  }
+  
+  .links li i{
+	margin: 0 10px 0 0;
+}
+
