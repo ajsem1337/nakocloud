@@ -5,15 +5,31 @@
 
 body {
 	background-color: #2b2a33;
+	overflow: hidden;
 }
 
 nav {
-	font-style: unset;
-	text-decoration: none;
+	padding: 5px 0px 15px 5px;
 	font-size: 35px;
 }
 
 nav a {
 	text-decoration: none;
 	color: aliceblue;
+	opacity: 0.85;
+}
+
+nav a:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+
+#kitku {
+	display: flex;
+	justify-content: center;
+}
+
+#kitku img {
+	max-height: 90vh;
+	min-height: 45vh;
 }

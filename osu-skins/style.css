@@ -1,6 +1,7 @@
 * {
 	box-sizing: border-box;
 	margin: auto 0;
+	color: aliceblue;
 }
 
 body {
@@ -15,7 +16,11 @@ nav {
 
 nav a {
 	text-decoration: none;
-	color: aliceblue;
+	opacity: 0.85;
+}
+
+nav a:hover {
+	opacity: 1;
 }
 
 .skins {
@@ -25,12 +30,18 @@ nav a {
 	justify-items: center;
 	margin: 5% 10% 0;
 	padding-bottom: 10%;
+	gap: 25px 0px;
 }
 
 .item {
-	border-radius: 8px;
+	border-radius: 10px;
 	height: 400px;
 	width: 600px;
+	background: black;
+}
+
+.item:hover {
+	box-shadow: 0px 0px 5px 2px rgba(255, 254, 254, 0.5);
 }
 
 .skin_header {
