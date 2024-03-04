@@ -1,9 +1,10 @@
-// Get all elements with the class 'obrazek'
-var obrazekElements = document.querySelectorAll('.obrazek')
+async function dej_link_do_kota() {
+	const response = await fetch('https://api.thecatapi.com/v1/images/search')
+	let wynik = await response.json()
+	return wynik[0].url
+}
 
-// Add click event listener to each obrazek element
-obrazekElements.forEach(function (obrazek) {
-	obrazek.addEventListener('click', function () {
-		this.classList.toggle('expanded')
-	})
-})
+async function podmien() {
+	const div = document.getElementById('kot')
+	div.src = await dej_link_do_kota()
+}
