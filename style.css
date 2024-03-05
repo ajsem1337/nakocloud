@@ -14,6 +14,7 @@ body {
 	background-color: #2b2a33;
 	margin: 0 auto;
 	display: flex;
+	justify-content: center;
 }
 
 nav {
@@ -42,10 +43,10 @@ nav li a {
 
 nav li a:hover {
 	background-color: #2b2a33;
-	color: #FF91A4;
+	color: #ff91a4;
 }
 
-nav li i{
+nav li i {
 	margin: 0 5px 0 0;
 }
 
@@ -58,10 +59,10 @@ nav li i{
 	flex-wrap: wrap;
 }
 
-.about p{
+.about p {
 	padding: 10px;
 	margin: 10px;
-	color: #FF91A4;
+	color: #ff91a4;
 	font-size: x-large;
 }
 
@@ -69,29 +70,28 @@ nav li i{
 	list-style: none;
 	margin: 0;
 	padding: 0;
-  }
-  
-  .links  li {
+}
+
+.links li {
 	display: grid;
 	margin-top: 20px;
-  }
-  
-  .links  a {
+}
+
+.links a {
 	padding: 10px;
 	text-decoration: none;
 	color: #161b22;
 	background-color: #eee;
 	border-radius: 5px;
 	font-size: 175%;
-  }
-  
-  .links a:hover {
+}
+
+.links a:hover {
 	/* background-color: #ccc; */
 	background-color: #161b22;
 	color: #fff;
-  }
-  
-  .links li i{
-	margin: 0 10px 0 0;
 }
 
+.links li i {
+	margin: 0 10px 0 0;
+}
