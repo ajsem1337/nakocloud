@@ -1,0 +1,29 @@
+@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
+
+@supports (font-variation-settings: normal) {
+	code {
+		font-family: 'Fira Code VF', monospace;
+	}
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	font-family: 'Fira Code', monospace;
+}
+
+body {
+	background-color: #2b2a33;
+	margin: 0 auto;
+}
+
+nav {
+	padding: 10px 5px 15px 5px;
+	font-size: 35px;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}

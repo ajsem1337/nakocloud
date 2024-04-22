@@ -1,27 +1,44 @@
+@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
+
+@supports (font-variation-settings: normal) {
+	code {
+		font-family: 'Fira Code VF', monospace;
+	}
+}
+
 * {
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
-	margin: auto 0;
+	outline: none;
+	font-family: 'Fira Code', monospace;
 }
 
 body {
 	background-color: #2b2a33;
+	height: 100vh;
 	overflow: hidden;
 }
 
-nav {
-	padding: 5px 0px 15px 5px;
-	font-size: 35px;
-}
-
 nav a {
+	display: inline-block;
+	padding: 10px;
+	margin: 10px;
 	text-decoration: none;
-	color: aliceblue;
-	opacity: 0.85;
+	color: #161b22;
+	background-color: #eee;
+	border-radius: 8px;
+	font-size: 175%;
 }
 
 nav a:hover {
-	opacity: 1;
 	cursor: pointer;
+	background-color: #161b22;
+	color: #fff;
+}
+
+nav i {
+	margin-right: 10px;
 }
 
 #kitku {
