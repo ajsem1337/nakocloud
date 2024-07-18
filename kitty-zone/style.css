@@ -1,9 +1,8 @@
-@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
-
-@supports (font-variation-settings: normal) {
-	code {
-		font-family: 'Fira Code VF', monospace;
-	}
+@font-face {
+	font-family: 'FiraCodeNerdFont';
+	src: url('/fonts/FiraCodeNFP-Med.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
 }
 
 * {
@@ -11,7 +10,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	outline: none;
-	font-family: 'Fira Code', monospace;
+	font-family: 'FiraCodeNerdFont', sans-serif;
 }
 
 body {
@@ -35,10 +34,6 @@ nav a:hover {
 	cursor: pointer;
 	background-color: #161b22;
 	color: #fff;
-}
-
-nav i {
-	margin-right: 10px;
 }
 
 #kitku {
