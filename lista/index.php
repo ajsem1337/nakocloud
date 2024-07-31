@@ -14,6 +14,6 @@
                 <input type="search" name="" id="szukajka" placeholder="szukaj np. stereogatari"> 
             </div>
             <a href="admin.php"><i class="bi bi-file-earmark-lock"></i> admin</a>
-    </nav>
+    </nav> 
 </body>
 </html>
