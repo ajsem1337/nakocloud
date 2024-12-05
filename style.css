@@ -1,21 +1,17 @@
-@font-face {
-	font-family: 'FiraCodeNerdFont';
-	src: url('./fonts/FiraCodeNFP-Med.woff2') format('woff2');
-	font-weight: normal;
-	font-style: normal;
-}
+@import '../shared/variables.css';
+@import '../node_modules/normalize.css/normalize.css';
 
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	outline: none;
-	font-family: 'FiraCodeNerdFont', sans-serif;
 }
 
 body {
-	background-color: #2b2a33;
-	height: 100vh;
+	font-family: var(--font-family-main);
+	background-color: var(--bg1);
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -24,7 +20,7 @@ body {
 nav p {
 	padding: 10px;
 	margin: 10px;
-	color: #ff91a4;
+	color: var(--accent-color);
 	font-size: 160%;
 }
 
@@ -43,14 +39,14 @@ nav p {
 	width: 400px;
 	padding: 10px;
 	text-decoration: none;
-	color: #161b22;
-	background-color: #eee;
+	color: var(--text-color-2);
+	background-color: var(--accent-color-2);
 	border-radius: 8px;
 	font-size: 175%;
 }
 
 .links li a:hover {
-	background-color: #161b22;
-	color: #fff;
+	background-color: var(--sub2);
+	color: var(--text-color);
 	cursor: pointer;
 }

@@ -1,0 +1,32 @@
+@font-face {
+	font-family: 'FiraCodeNerdFont';
+	src: url('../assets/fonts/FiraCodeNFP-Med.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+:root {
+	/* Colors */
+	--bg1: #141318;
+	--bg2: #010101;
+	--sub1: #2b2a33;
+	--sub2: #0e0d11;
+	--text-color: #fff;
+	--text-color-2: #060607;
+	--accent-color: #ff91a4;
+	--accent-color-2: #eee;
+	--hover-color: #ff6f8e;
+	--shadow-color: rgba(0, 0, 0, 0.25);
+
+	/* Fonts */
+	--font-family-main: 'FiraCodeNerdFont', sans-serif;
+
+	/* Spacing */
+	--box-padding: 15px;
+	--box-radius: 8px;
+
+	/* Other */
+	--box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+	--box-shadow-hover: 0 4px 10px rgba(255, 145, 164, 0.5);
+}

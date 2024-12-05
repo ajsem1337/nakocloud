@@ -1,8 +1,11 @@
+@import '../node_modules/normalize.css/normalize.css';
+
 @font-face {
 	font-family: 'FiraCodeNerdFont';
 	src: url('../fonts/FiraCodeNFP-Med.woff2') format('woff2');
 	font-weight: normal;
 	font-style: normal;
+	font-display: swap;
 }
 
 * {
@@ -10,25 +13,32 @@
 	padding: 0;
 	box-sizing: border-box;
 	outline: none;
-	font-family: 'FiraCodeNerdFont', sans-serif;
 }
 
 body {
 	background-color: #2b2a33;
 	color: #fff;
 	display: flex;
+	font-family: 'FiraCodeNerdFont', sans-serif;
 }
 
 .left-panel {
 	width: 350px;
 	display: flex;
 	flex-direction: column;
+
+}
+
+.link {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	padding: 10px;
 }
 
 .link a {
-	display: inline-block;
 	padding: 10px;
-	margin: 10px;
+	display: inline-block;
 	text-decoration: none;
 	color: #161b22;
 	background-color: #eee;
@@ -42,15 +52,19 @@ body {
 	color: #fff;
 }
 
+.link a:focus {
+	border: 2px solid #fff;
+}
+
 #szukajka {
+	transform: translateX(6%);
 	padding: 10px;
-	margin: 10px;
 	text-decoration: none;
 	color: #161b22;
 	background-color: #eee;
 	border: 0;
 	border-radius: 8px;
-	width: 260px;
+	width: 90%;
 }
 
 #szukajka:focus {
@@ -60,10 +74,8 @@ body {
 }
 
 .left-panel table {
-	border: 0;
-	margin-left: 10px;
-	padding: 5px;
-	width: 70%;
+	padding: 10px 20px;
+	width: 100%;
 }
 
 .left-panel td:nth-child(even) {
@@ -71,26 +83,32 @@ body {
 	text-align: end;
 }
 
-.right-panel{
-	margin-top: 20%;
+.right-panel {
 	text-transform: capitalize;
 }
 
-.right-panel td{
+.right-panel td {
 	padding: 5px;
-	word-wrap: break-word;
-    white-space: normal;
+	overflow-wrap: anywhere;
 }
 
-.right-panel th{
+.right-panel th {
 	padding: 7px;
+	font-size: large;
 }
 
-.right-panel th:nth-child(1){
-    text-align: left;
-	
+.right-panel th:nth-child(1) {
+	text-align: left;
 }
 
-.right-panel td:not(:nth-child(1)){
+.right-panel td:not(:nth-child(1)) {
 	text-align: center;
+}
+
+.right-panel td:nth-child(even) {
+	color: pink;
+}
+
+.right-panel tr:nth-child(even) {
+	background-color: rgba(0, 0, 0, 0.15);
 }

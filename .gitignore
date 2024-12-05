@@ -1,0 +1,46 @@
+# Ignorowanie folderów tymczasowych i systemowych
+.DS_Store
+Thumbs.db
+
+# Ignorowanie folderów środowiska node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignorowanie konfiguracji IDE i edytorów kodu
+.vscode/
+.idea/
+
+# Ignorowanie plików build i cache
+dist/
+out/
+.cache/
+
+# Ignorowanie danych wrażliwych lub tymczasowych
+.env
+*.log
+*.bak
+
+# Ignorowanie plików z bazy danych
+*.sql
+*.xml
+
+# Ignorowanie plików backupowych systemu
+*.tmp
+*.swp
+
+# Ignorowanie plików binarnych i kompilacji
+*.exe
+*.dll
+
+# Ignorowanie plików specyficznych dla systemu
+desktop.ini
+
+# Ignorowanie zbędnych plików w folderze .git
+.git/lfs/
+.git/refs/remotes/origin/
+
+# Ignorowanie plików tymczasowych z edycji
+*.~lock.*
+*.pid

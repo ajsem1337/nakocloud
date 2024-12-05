@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Cover on Hover</title>
+    <style>
+        .anime-item {
+            display: inline-block;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        
+        .cover-image {
+            position: absolute;
+            display: none;
+            max-width: 200px;
+            border: 1px solid #ccc;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="anime-list">
+    <div class="anime-item" data-title="Naruto">Naruto</div>
+    <div class="anime-item" data-title="Attack on Titan">Attack on Titan</div>
+    <div class="anime-item" data-title="One Piece">One Piece</div>
+    <div class="anime-item" data-title="Oshi no ko">Oshi no ko</div>
+</div>
+
+<img id="coverImage" class="cover-image" src="" alt="Anime Cover">
+
+<script>
+    const animeItems = document.querySelectorAll('.anime-item');
+    const coverImage = document.getElementById('coverImage');
+
+    animeItems.forEach(item => {
+        item.addEventListener('mouseenter', async function () {
+            const title = item.getAttribute('data-title');
+            
+            // Pobierz dane z AniList API
+            const query = `
+            query ($search: String) {
+                Media(search: $search, type: ANIME) {
+                    coverImage {
+                        large
+                    }
+                }
+            }
+            `;
+
+            const variables = {
+                search: title
+            };
+
+            const url = 'https://graphql.anilist.co';
+            const options = {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                },
+                body: JSON.stringify({
+                    query: query,
+                    variables: variables
+                })
+            };
+
+            const response = await fetch(url, options);
+            const data = await response.json();
+
+            if (data && data.data && data.data.Media && data.data.Media.coverImage) {
+                const imageUrl = data.data.Media.coverImage.large;
+                coverImage.src = imageUrl;
+                coverImage.style.display = 'block';
+
+                // Ustaw pozycję obrazka obok tekstu
+                coverImage.style.left = item.getBoundingClientRect().left + 'px';
+                coverImage.style.top = item.getBoundingClientRect().bottom + 'px';
+            }
+        });
+
+        item.addEventListener('mouseleave', function () {
+            coverImage.style.display = 'none';
+        });
+    });
+</script>
+
+</body>
+</html>
