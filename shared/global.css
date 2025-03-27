@@ -56,6 +56,9 @@ body {
 	background-color: var(--bg1);
 	min-height: 100vh;
 	transition: background-color 0.3s, color 0.3s;
+	max-width: 1800px; /* lub inna wartość, np. 1400px dla monitorów 2K */
+	margin: 0 auto; /* wyśrodkowanie kontenera */
+	padding: 0 15px; /* opcjonalnie, trochę odstępu od krawędzi ekranu */
 }
 
 .theme-button {
@@ -112,3 +115,9 @@ nav a:hover {
 	box-shadow: var(--box-shadow-hover);
 	cursor: pointer;
 }
+
+@media (min-width: 1800px) {
+	.theme-button.floating {
+	  right: calc((100vw - 1800px) / 2 + 15px);
+	}
+  }
