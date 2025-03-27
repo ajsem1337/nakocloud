@@ -1,6 +1,3 @@
-@import '../shared/variables.css';
-@import '../node_modules/normalize.css/normalize.css';
-
 * {
 	margin: 0;
 	padding: 0;
@@ -8,35 +5,18 @@
 	outline: none;
 }
 
-body {
-	font-family: var(--font-family-main);
-	background-color: var(--bg1);
-	min-height: 100vh;
-}
-
-nav a {
-	display: inline-block;
-	padding: 10px;
-	margin: 10px;
-	text-decoration: none;
-	color: var(--text-color-2);
-	background-color: var(--accent-color-2);
-	border-radius: 8px;
-	font-size: 175%;
-}
-
-nav a:hover {
-	background-color: var(--sub2);
-	color: var(--text-color);
-	cursor: pointer;
-}
-
 #kitku {
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
 }
 
 #kitku img {
-	max-height: 90vh;
-	min-height: 45vh;
+	max-height: 85vh;
+	min-height: 50vh;
+	object-fit: contain;
+	border-radius: var(--box-radius);
+	box-shadow: var(--box-shadow);
+	transition: opacity 0.3s ease;
 }

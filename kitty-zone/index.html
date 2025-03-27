@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>kitku</title>
-	<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kitty Zone</title>
+  <link rel="stylesheet" href="../shared/normalize.css" />
+  <link rel="stylesheet" href="../shared/global.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
+<body class="dark-theme">
+  <button class="theme-button floating" id="theme-toggle">&#xF522;</button>
 
-<body onload=" podmien()">
-	<nav>
-		<a href="../">&#xF0BA7; home</a>
-		<a onclick="podmien()">&#xF0450; refresh image</a>
-	</nav>
+  <nav>
+    <a href="../">&#xF0BA7; home</a>
+    <a id="refreshBtn">&#xF0450; refresh image</a>
+  </nav>
 
-	<div id="kitku">
-		<img src="./" id="kot" alt=" " />
-	</div>
+  <div id="kitku">
+    <img src="" id="kot" alt="random kitty" />
+  </div>
 
-	<script src="./main.js"></script>
+  <script src="../shared/theme.js"></script>
+  <script src="main.js"></script>
 </body>
-
 </html>

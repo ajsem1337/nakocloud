@@ -1,36 +1,8 @@
-@import '../shared/variables.css';
-@import '../node_modules/normalize.css/normalize.css';
-
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	outline: none;
-}
-
-body {
-	font-family: var(--font-family-main);
-	min-height: 100vh;
-	background-color: var(--bg1);
-	color: var(--text-color);
-}
-
-nav a {
-	display: inline-block;
-	padding: 10px;
-	margin: 10px;
-	text-decoration: none;
-	background-color: var(--accent-color-2);
-	color: var(--text-color-2);
-	border-radius: 8px;
-	font-size: 175%;
-}
-
-nav a:hover {
-	background-color: var(--sub2);
-	color: var(--text-color);
-	cursor: pointer;
-	text-decoration: none;
 }
 
 .skins {
@@ -39,35 +11,42 @@ nav a:hover {
 	justify-content: center;
 	justify-items: center;
 	margin: 25px 0;
-	padding-bottom: 10%;
+	padding: 0 15px 10% 15px;
 	gap: 25px 0px;
 }
 
 .item {
-	border-radius: 10px;
-	height: 400px;
-	width: 600px;
+	border-radius: var(--box-radius);
+	width: 100%;
+	max-width: 600px;
 	background: var(--bg2);
+	overflow: hidden;
+	box-shadow: var(--box-shadow);
+	transition: box-shadow 0.3s;
 }
 
 .item:hover {
-	box-shadow: 0px 0px 5px 2px rgba(255, 254, 254, 0.5);
+	box-shadow: var(--box-shadow-hover);
 }
 
 .skin_header {
 	background-color: var(--bg2);
-	border-radius: 20px 20px 0 0;
-	padding: 5px;
+	padding: 10px;
 	text-align: center;
 }
 
 .skin_header a {
 	text-decoration: none;
 	color: var(--accent-color);
+	font-weight: bold;
+	font-size: 110%;
 }
 
 .obrazek {
 	max-width: 100%;
+	height: auto;
+	border-bottom-left-radius: var(--box-radius);
+	border-bottom-right-radius: var(--box-radius);
 	transition: transform 0.3s ease-in-out;
 	cursor: zoom-in;
 }

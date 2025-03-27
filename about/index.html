@@ -5,15 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>about</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../shared/normalize.css" />
+    <link rel="stylesheet" href="../shared/global.css" />
+    <link rel="stylesheet" href="style.css" />
+
 </head>
 
 
 <body>
-    <div class="header-container">
-        <a href="../" class="back-button">&#xF0BA7; home</a>
+    <nav class="nav-top">
+        <a href="../">&#xF0BA7; home</a>
         <h1>Welcome to my little page of internet chaos!</h1>
-    </div>
+        <button class="theme-button" id="theme-toggle">&#xF522;</button>
+    </nav>
 
 
     <div class="about">
@@ -31,14 +35,14 @@
                         target="_blank">Steam</a>:</strong>10,734 godziny zmarnowane na wirtualne przygody. Zamiast tego
                 mógłbym być maratończykiem albo pisać bestsellerowe książki. Ale kto potrzebuje tego wszystkiego, skoro
                 mogę tracić czas i pieniądze na Steamie? 🤷‍♂️</li>
-            <li>&#xF439; <strong style="color: #ff91a4;"> Genshin i ZZZ</strong> gry, które łączą piękną grafikę z
+            <li>&#xF439; <strong> Genshin i ZZZ</strong> gry, które łączą piękną grafikę z
                 rozrywką, która kończy się płaczem i pustym portfelem. Hoyo zna wszystkie sztuczki, by wyciągnąć hajs
                 nawet z największych skner. </li>
             <li>&#xF0CA1; <strong><a href="https://osu.ppy.sh/users/8343827" target="_blank">Osu!</a>:</strong> Średni
                 skill, ale mam więcej skinów niż faktycznych godzin spędzonych w grze.</li>
-            <li>&#xF10B; <strong style="color: #ff91a4;">AFK Arena:</strong> Prawie 600 godzin i mnóstwo pieniędzy w
+            <li>&#xF10B; <strong>AFK Arena:</strong> Prawie 600 godzin i mnóstwo pieniędzy w
                 grze, która gra za mnie. 😅</li>
-            <li>&#xEF94; <strong style="color: #ff91a4;">Battle.net</a>:</strong> Tak, gram w Diablo IV. Wolę zabijać
+            <li>&#xEF94; <strong>Battle.net</a>:</strong> Tak, gram w Diablo IV. Wolę zabijać
                 demony niż walczyć z tabelkami w PoE.</li>
             <li>&#xF07DF; <strong><a href="https://www.op.gg/summoners/eune/%E3%82%A2%E3%82%A4%E3%82%BB%E3%83%A0-UwU"
                         target="_blank">League of Legends</a>:</strong>
@@ -46,12 +50,13 @@
                 Annie z 2016 – dowód, że kiedyś miałem nadzieję. Teraz wiem, że to był błąd. 🥲 </li>
             <li>&#xEA84; <strong> <a href="https://github.com/ajsem1337" target="_blank">Programowanie:</a></strong>
                 Pisanie kodu to
-                10% mojego wkładu, 25% odpowiedzi z <strong style="color: #ff91a4;">Stack Overflow</strong>, 50%
-                podpowiedzi od <strong style="color: #ff91a4;">ChatGPT</strong>, 5% szczęścia i kolejne 10% 14-letnich
+                10% mojego wkładu, 25% odpowiedzi z <strong>Stack Overflow</strong>, 50%
+                podpowiedzi od <strong>ChatGPT</strong>, 5% szczęścia i kolejne 10% 14-letnich
                 poradników na YouTube z hinduskim akcentem, którego ledwo rozumiem. Ale działa!
             </li>
         </ul>
     </div>
+    
     <div class="main">
         <div class="specs">
             <div class="pc-section">
@@ -134,7 +139,9 @@
         <p>Contact: <a href="mailto:example@email.com">9yvzsrpli@mozmail.com</a> | Discord: <span>ajsem1337</span></p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="main.js"></script>
+    <script src="../shared/theme.js"></script>
+
 </body>
 
 </html>

@@ -37,10 +37,6 @@ out/
 # Ignorowanie plików specyficznych dla systemu
 desktop.ini
 
-# Ignorowanie zbędnych plików w folderze .git
-.git/lfs/
-.git/refs/remotes/origin/
-
 # Ignorowanie plików tymczasowych z edycji
 *.~lock.*
 *.pid

@@ -1,34 +1,42 @@
-# Ustawienie domyślnego pliku startowego
+# Ustawienie domyślnych plików startowych
 DirectoryIndex index.php index.html
 
-# Włączanie obsługi błędów
+# Strony błędów
 ErrorDocument 404 /404.html
 ErrorDocument 500 /500.html
 
-# Włączanie mod_rewrite
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
-    # Przekierowanie na HTTPS (jeśli certyfikat SSL jest aktywny)
+    # Przekierowanie z HTTP do HTTPS
     RewriteCond %{HTTPS} !=on
     RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-    # Usuwanie "www" z adresu URL
-    RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-    RewriteRule ^(.*)$ https://%1/$1 [L,R=301]
+    # Usunięcie "www" z adresu URL
+    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+    RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
 
-    # Obsługa skracania linków (ukrywanie index.php i index.html)
+    # Skracanie linków: usuwanie rozszerzeń .php i .html, jeśli plik istnieje
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}\.php -f
+    RewriteRule ^(.*)$ $1.php [L]
+
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}\.html -f
+    RewriteRule ^(.*)$ $1.html [L]
+
+    # Front controller: przekierowanie żądań do index.php, gdy żądany plik/katalog nie istnieje
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.+)$ index.php/$1 [L,QSA]
 </IfModule>
 
-# Zabezpieczenie folderów
+# Zabezpieczenie: blokowanie dostępu do ukrytych plików (np. .git, .env)
 <FilesMatch "^\.">
     Require all denied
 </FilesMatch>
 
-# Blokowanie dostępu do plików .htaccess i innych wrażliwych
+# Blokowanie dostępu do wrażliwych plików
 <Files ".htaccess">
     Require all denied
 </Files>
@@ -41,7 +49,7 @@ ErrorDocument 500 /500.html
     AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css application/xml application/xhtml+xml application/javascript application/x-javascript
 </IfModule>
 
-# Cache statycznych plików (CSS, JS, obrazy)
+# Ustawienie cache dla statycznych zasobów
 <IfModule mod_expires.c>
     ExpiresActive On
     ExpiresByType text/css "access plus 1 week"
@@ -55,15 +63,4 @@ ErrorDocument 500 /500.html
     ExpiresByType application/x-shockwave-flash "access plus 1 month"
     ExpiresByType image/x-icon "access plus 1 year"
     ExpiresDefault "access plus 2 days"
-</IfModule>
-
-# Skracanie linków (usuwanie rozszerzeń .html, .php)
-<IfModule mod_rewrite.c>
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME}\.php -f
-    RewriteRule ^(.*)$ $1.php [L]
-
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_FILENAME}\.html -f
-    RewriteRule ^(.*)$ $1.html [L]
 </IfModule>

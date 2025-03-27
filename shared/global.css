@@ -1,0 +1,114 @@
+/* Czcionki */
+@font-face {
+	font-family: 'FiraCodeNerdFont';
+	src: url('../assets/fonts/FiraCodeNFP-Med.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Kolory i style dla ciemnego motywu (domyślny) */
+:root {
+	/* Kolory tła i tekstu */
+	--bg1: #141318;
+	--bg2: #010101;
+	--text-color: #fff;
+	--text-color-2: #060607;
+
+	/* Akcenty */
+	--accent-color: #ff91a4;
+	--accent-color-2: #eee;
+	--hover-color: #ff6f8e;
+
+	/* Cienie i spacing */
+	--shadow-color: rgba(0, 0, 0, 0.25);
+	--box-padding: 15px;
+	--box-radius: 8px;
+	--box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+	--box-shadow-hover: 0 4px 10px rgba(255, 145, 164, 0.5);
+
+	/* Czcionka */
+	--font-family-main: 'FiraCodeNerdFont', sans-serif;
+}
+
+/* Nadpisanie zmiennych dla jasnego motywu */
+.light-theme {
+	--bg1: #e0e0e0;
+	--bg2: #ffffff;
+	--text-color: #333;
+	--text-color-2: #222;
+
+	--accent-color: #007bff;
+	--accent-color-2: #fff;
+	--hover-color: #0056b3;
+
+	--shadow-color: rgba(0, 0, 0, 0.15);
+	--box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+	--box-shadow-hover: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* ====================== */
+/* Theme toggle button 💡 */
+/* ====================== */
+
+body {
+	font-family: var(--font-family-main);
+	background-color: var(--bg1);
+	min-height: 100vh;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-button {
+	font-family: var(--font-family-main);
+	background-color: var(--accent-color);
+	border: none;
+	color: var(--text-color);
+	width: 42px;
+	height: 42px;
+	font-size: 1.4em;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: var(--box-shadow);
+}
+
+.theme-button:hover {
+	background-color: var(--hover-color);
+	transform: scale(1.1);
+	box-shadow: var(--box-shadow-hover);
+}
+
+.theme-button.floating {
+	position: fixed;
+	top: 15px;
+	right: 15px;
+	z-index: 10;
+}
+
+nav {
+	display: flex;
+	gap: 15px;
+	padding: 15px 0 0 15px;
+}
+
+nav a {
+	padding: 10px;
+	text-decoration: none;
+	color: var(--text-color-2);
+	background-color: var(--accent-color-2);
+	border-radius: var(--box-radius);
+	font-size: 175%;
+	transition: background-color 0.3s, color 0.3s, transform 0.2s;
+	font-family: var(--font-family-main);
+}
+
+nav a:hover {
+	background-color: var(--accent-color);
+	color: var(--text-color);
+	transform: scale(1.02);
+	box-shadow: var(--box-shadow-hover);
+	cursor: pointer;
+}

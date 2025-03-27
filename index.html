@@ -2,38 +2,41 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>nakocloud</title>
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nakocloud</title>
+    <link rel="stylesheet" href="./shared/normalize.css" />
+    <link rel="stylesheet" href="./shared/global.css" />
+    <link rel="stylesheet" href="./style.css" />
 </head>
 
+<body class="dark-theme">
+    <button class="theme-button floating" id="theme-toggle">&#xF522;</button>
+    <nav class="header-bar">
+        <h1>Hmm, hello there I guess.</h1>
+    </nav>
 
-<body>
-	<nav>
-		<p>Hmm, hello there I guess.</p>
-	</nav>
-	<div class="links">
-		<ul>
-			<li>
-				<a href="./about">&#xf007; about me</a>
-			</li>
-			<li>
-				<a href="./osu-skins">&#xF0CA1; osu skins</a>
-			</li>
-			<li>
-				<a href="./kitty-zone">&#xF011B; kitty zone</a>
-			</li>
-			<li>
-				<a href="./lista">&#xF0CA; anime list</a>
-			</li>
-			<li>
-				<a href="https://nakocloud.ddns.net/nextcloud/index.php/s/t352cfDsJeqMGmm" target="_blank">&#xF07C;
-					files</a>
-			</li>
-		</ul>
-	</div>
-	<script src="./main.js"></script>
+    <div class="links">
+        <ul>
+            <li>
+                <a href="./about">&#xf007; about me</a>
+            </li>
+            <li>
+                <a href="./osu-skins">&#xF0CA1; osu skins</a>
+            </li>
+            <li>
+                <a href="./kitty-zone">&#xF011B; kitty zone</a>
+            </li>
+            <li>
+                <a href="./lista">&#xF0CA; anime list</a>
+            </li>
+            <li>
+                <a href="https://nakocloud.ddns.net/nextcloud/index.php/s/t352cfDsJeqMGmm" target="_blank">&#xF07C;
+                    files</a>
+            </li>
+        </ul>
+    </div>
+    <script src="./shared/theme.js"></script>
 </body>
 
 </html>
