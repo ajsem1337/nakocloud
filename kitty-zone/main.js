@@ -1,20 +1,31 @@
-async function dej_link_do_kota() {
-	const response = await fetch('https://api.thecatapi.com/v1/images/search');
-	const wynik = await response.json();
-	return wynik[0].url;
-  }
-  
-  async function podmien() {
-	const img = document.getElementById('kot');
-	img.src = await dej_link_do_kota();
-  }
-  
-  document.addEventListener('DOMContentLoaded', () => {
-	podmien();
-  
-	const refreshBtn = document.getElementById('refreshBtn');
+function loadCat() {
+	const img = document.getElementById('kot')
+	if (!img) return
+	img.src = '' // czyść stare
+	img.alt = 'loading...'
+	// Przykładowe API kotów (TheCatAPI)
+	fetch('/catapi/')
+		.then(r => r.json())
+		.then(data => {
+			if (data && data[0] && data[0].url) {
+				img.src = data[0].url
+				img.alt = 'random kitty'
+			} else {
+				img.alt = 'could not load cat'
+			}
+		})
+		.catch(() => {
+			img.alt = 'error loading cat'
+		})
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+	loadCat()
+	const refreshBtn = document.getElementById('refreshBtn')
 	if (refreshBtn) {
-	  refreshBtn.addEventListener('click', podmien);
+		refreshBtn.addEventListener('click', e => {
+			e.preventDefault()
+			loadCat()
+		})
 	}
-  });
-  
+})

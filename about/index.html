@@ -2,146 +2,215 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>about</title>
     <link rel="stylesheet" href="../shared/normalize.css" />
     <link rel="stylesheet" href="../shared/global.css" />
-    <link rel="stylesheet" href="style.css" />
-
+    <link rel="stylesheet" href="./style.css" />
 </head>
 
-
-<body>
-    <nav class="nav-top">
-        <a href="../">&#xF0BA7; home</a>
-        <h1>Welcome to my little page of internet chaos!</h1>
-        <button class="theme-button" id="theme-toggle">&#xF522;</button>
-    </nav>
-
-
-    <div class="about">
-        <p>
-            Hej, jestem Kacper, człowiek internetu, który unika ludzi bardziej niż patch notes w grach online. Mam lęk
-            społeczny i depresję, co czyni moje życie jedyną grą, w którą gram na hardzie.
-            Zalety? Brak. Ale za to, ile wad! W wolnym czasie dodaję kolejne bajki na listę, mimo że i tak ich nie
-            obejrzę, i zbieram gierki na Steamie jak Ash odznaki.
-            Słucham praktycznie wszystkiego, co wpadnie mi w ucho – od ciężkich brzmień po chillujące melodie.
-            Szukam samicy idealnej – wymagania: oddycha. 😢
-        </p>
-        <hr>
-        <ul>
-            <li>&#xF1B6; <strong><a href="https://steamcommunity.com/id/ajsem/"
-                        target="_blank">Steam</a>:</strong>10,734 godziny zmarnowane na wirtualne przygody. Zamiast tego
-                mógłbym być maratończykiem albo pisać bestsellerowe książki. Ale kto potrzebuje tego wszystkiego, skoro
-                mogę tracić czas i pieniądze na Steamie? 🤷‍♂️</li>
-            <li>&#xF439; <strong> Genshin i ZZZ</strong> gry, które łączą piękną grafikę z
-                rozrywką, która kończy się płaczem i pustym portfelem. Hoyo zna wszystkie sztuczki, by wyciągnąć hajs
-                nawet z największych skner. </li>
-            <li>&#xF0CA1; <strong><a href="https://osu.ppy.sh/users/8343827" target="_blank">Osu!</a>:</strong> Średni
-                skill, ale mam więcej skinów niż faktycznych godzin spędzonych w grze.</li>
-            <li>&#xF10B; <strong>AFK Arena:</strong> Prawie 600 godzin i mnóstwo pieniędzy w
-                grze, która gra za mnie. 😅</li>
-            <li>&#xEF94; <strong>Battle.net</a>:</strong> Tak, gram w Diablo IV. Wolę zabijać
-                demony niż walczyć z tabelkami w PoE.</li>
-            <li>&#xF07DF; <strong><a href="https://www.op.gg/summoners/eune/%E3%82%A2%E3%82%A4%E3%82%BB%E3%83%A0-UwU"
-                        target="_blank">League of Legends</a>:</strong>
-                miejsce, gdzie 9 lat frustracji i wyzwisk spotykało się z moim uporem. Pierwszy skin? Frankentibbers
-                Annie z 2016 – dowód, że kiedyś miałem nadzieję. Teraz wiem, że to był błąd. 🥲 </li>
-            <li>&#xEA84; <strong> <a href="https://github.com/ajsem1337" target="_blank">Programowanie:</a></strong>
-                Pisanie kodu to
-                10% mojego wkładu, 25% odpowiedzi z <strong>Stack Overflow</strong>, 50%
-                podpowiedzi od <strong>ChatGPT</strong>, 5% szczęścia i kolejne 10% 14-letnich
-                poradników na YouTube z hinduskim akcentem, którego ledwo rozumiem. Ale działa!
-            </li>
-        </ul>
-    </div>
-    
-    <div class="main">
-        <div class="specs">
-            <div class="pc-section">
-                <h3>&#xF108; PC</h3>
-                <ul>
-                    <li><strong>CPU:</strong> RYZEN 5 5600</li>
-                    <li><strong>GPU:</strong> RX 7900 GRE HELLHOUND</li>
-                    <li><strong>RAM:</strong> Lexar Thor 3600MHz, 2x16</li>
-                    <li><strong>PSU:</strong> ASUS ROG STRIX 750G</li>
-                    <li><strong>MOBO:</strong> ROG STRIX B550-F GAMING WIFI II</li>
-                    <li><strong>CASE:</strong> LIAN LI LANCOOL III BLACK</li>
-                    <li><strong>COOLER:</strong> ARCTIC FREEZER 34 ESPORTS DUO</li>
-                    <li><strong>STORAGE:</strong> Lexar NQ790 1TB M.2 // LEXAR NM710 1TB M.2</li>
-                </ul>
-            </div>
-
-            <div class="pc-section">
-                <h3>&#xF0B82; Peripherals</h3>
-                <ul>
-                    <li><strong>Microphone:</strong> RAZER SIREN MINI</li>
-                    <li><strong>Mouse:</strong> RAZER BASILISK V3</li>
-                    <li><strong>Mouse Pad:</strong> X-KOM G4M3R PRO</li>
-                    <li><strong>Keypad:</strong> WOOTING UWU RGB</li>
-                    <li><strong>Keyboard:</strong> RAZER HUNTSMAN V2</li>
-                    <li><strong>Headphones:</strong> RAZER KRAKEN KITTY</li>
-                    <li><strong>Controller:</strong> XBOX SERIES-X BLACK</li>
-                    <li><strong>Tablet:</strong> WACOM 4100 // HUION H640P</li>
-                    <li><strong>Monitor:</strong> LG 34WP75C *2</li>
-                </ul>
-            </div>
-
-            <div class="pc-section">
-                <h3>&#xF0379; Workspace</h3>
-                <ul>
-                    <li><strong>Desk:</strong> Ultradesk Frag XXL</li>
-                    <li><strong>Chair:</strong> Ikea Markus</li>
-                </ul>
-            </div>
+<body data-page="about" data-nav-title="about me">
+    <nav id="global-nav"></nav>
+    <main>
+        <div class="about">
+            <p>
+                Hej, jestem Kacper, człowiek internetu, który unika ludzi bardziej niż patch notes w grach online.
+                Mam lęk społeczny i depresję, co czyni moje życie jedyną grą, w którą gram na hardzie. Zalety? Brak.
+                Ale za to, ile wad! W wolnym czasie dodaję kolejne bajki na listę, mimo że i tak ich nie obejrzę,
+                i zbieram gierki na Steamie jak Ash odznaki. Słucham praktycznie wszystkiego, co wpadnie mi w ucho
+                – od ciężkich brzmień po chillujące melodie. Szukam samicy idealnej – wymagania: oddycha. 😢
+                Na co dzień udaję, że coś potrafię, pracując w IT. Większość problemów rozwiązuję pytaniem
+                „Próbował pan wyłączyć i włączyć?” lub instalacją adobe readera.
+                Gdy ktoś wypowie słowo „drukarka”, dostaję zimnych potów i drgawek. Już nie mam siły do tej kurwy,
+                mówię pod nosem. Ludzie myślą, że naprawdę coś umiem, a ja zamiast zapobiegać problemom
+                nieudolnie próbuję nauczyć się, jak je rozwiązywać.
+            </p>
+            <hr />
         </div>
 
-        <div class="playlist-container">
-            <div class="playlist-box">
-                <img src="../assets/about/nature-mystery-unveiled-by-generative-ai-technology-generative-ai.jpg"
-                    alt="Grind & Glory" class="playlist-img">
-                <h3 class="icon-title">&#xF001; Grind & Glory</h3>
-                <p>Idealne na wieczory przy RPG-ach i grindzie. Od metalowych kawałków po instrumentalne soundtracki.
-                </p>
-                <a href="https://music.youtube.com/playlist?list=PLymxlVvXRlC76cEmH6SgpeD7rU8IxyLYT&si=1GZJji5a2axrLIFJ"
-                    class="btn">&#xf0c1; Otwórz Playlistę</a>
+        <section class="main">
+            <div class="specs">
+                <div class="box">
+                    <h3>
+                        &#xF108;
+                        <span class="pc-toggle active" data-pc="pc1">PC1</span> /
+                        <span class="pc-toggle" data-pc="pc2">PC2</span>
+                    </h3>
+
+                    <div id="pc1-specs">
+                        <ul>
+                            <li><strong>CPU:</strong> RYZEN 5 5600</li>
+                            <li><strong>GPU:</strong> RX 7900 GRE HELLHOUND</li>
+                            <li><strong>RAM:</strong> Lexar Thor 3600 MHz, 2×16 GB</li>
+                            <li><strong>PSU:</strong> ASUS ROG STRIX 750G</li>
+                            <li><strong>MOBO:</strong> ROG STRIX B550-F GAMING WIFI II</li>
+                            <li><strong>CASE:</strong> LIAN LI LANCOOL III BLACK</li>
+                            <li><strong>FANS:</strong> 3x Lian Li ST120 ARGB</li>
+                            <li><strong>COOLER:</strong> ARCTIC FREEZER 34 ESPORTS DUO</li>
+                            <li><strong>STORAGE:</strong> Lexar NQ790 1 TB M.2 // LEXAR NM710 1 TB M.2</li>
+                        </ul>
+                    </div>
+
+                    <div id="pc2-specs" style="display: none;">
+                        <ul>
+                            <li><strong>CPU:</strong> RYZEN 5 1600 af</li>
+                            <li><strong>GPU:</strong> ASUS GTX 1050 2 GB</li>
+                            <li><strong>RAM:</strong> IRDM X Black 3200 MHz CL16 4×8 GB</li>
+                            <li><strong>PSU:</strong> Be Quiet! BQ SU7-500W</li>
+                            <li><strong>MOBO:</strong> Gigabyte B550 GAMING X V2</li>
+                            <li><strong>CASE:</strong> LIAN LI LANCOOL II MESH C</li>
+                            <li><strong>COOLER:</strong> Stock xd</li>
+                            <li><strong>STORAGE:</strong> Samsung 980 Pro 1 TB NVMe // Jakieś 2 HDD razem 1 TB</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <h3>&#xF0B82; Peripherals</h3>
+                    <ul>
+                        <li><strong>Microphone:</strong> RAZER SIREN MINI</li>
+                        <li><strong>Mouse:</strong> RAZER BASILISK V3</li>
+                        <li><strong>Mouse Pad:</strong> X-KOM G4M3R PRO</li>
+                        <li><strong>Keypad:</strong> WOOTING UWU RGB</li>
+                        <li><strong>Keyboard:</strong> RAZER HUNTSMAN V2</li>
+                        <li><strong>Headphones:</strong> RAZER KRAKEN KITTY</li>
+                        <li><strong>Controller:</strong> XBOX SERIES-X BLACK</li>
+                        <li><strong>Tablet:</strong> WACOM 4100 // HUION H640P</li>
+                        <li><strong>Monitor:</strong> LG 34WP75C ×2</li>
+                        <li><strong>Webcam:</strong> Generic webcam from Temu</li>
+                    </ul>
+                </div>
+
+                <div class="box">
+                    <h3>&#xF0379; Workspace</h3>
+                    <ul>
+                        <li><strong>Desk:</strong> Ultradesk Frag XXL </li>
+                        <li><strong>Chair:</strong> Ikea Markus </li>
+                        <li><strong>Lampa: <span class="muted">jak skurwysyn</span></strong> LÅNESPELARE </li>
+                        <li><strong>Ramię mikrofonowe:</strong> MOZOS SB36 </li>
+                    </ul>
+
+                    <br />
+
+                    <h3>&#xF0B8A; Other Stuff</h3>
+                    <ul>
+                        <li><strong>Phone:</strong> Blackview BV8800</li>
+                        <li><strong>Work Phone:</strong> Samsung A15 5G</li>
+                        <li><strong>Smartwatch:</strong> Redmi Watch 4</li>
+                        <li><strong>Handheld:</strong> Steam Deck 1 TB OLED</li>
+                        <li><strong>Printer:</strong> HP Deskjet 3530 <span class="muted">już nie mam siły do tej
+                                kurwy</span></li>
+                    </ul>
+                </div>
+
+                <div class="box">
+                    <h3>&#xF0379; Games &amp; Links</h3>
+                    <ul>
+                        <li>
+                            <strong>Steam:</strong>
+                            <a href="https://steamcommunity.com/id/ajsem/" target="_blank" rel="noopener">
+                                warframe, apex, dbd and more
+                            </a>
+                        </li>
+                        <li>
+                            <strong>Hoyoverse:</strong>
+                            <a href="https://enka.network/u/ajsem/3JPBMC/10000091/3973667/" target="_blank"
+                                rel="noopener">Genshin</a>
+                            &amp;
+                            <a href="https://enka.network/zzz/1500273538/" target="_blank" rel="noopener">ZZZ</a>
+                        </li>
+                        <li>
+                            <strong>Osu:</strong>
+                            <a href="https://osu.ppy.sh/users/8343827" target="_blank" rel="noopener">std only</a>
+                        </li>
+                        <li><strong>Mobile:</strong> AFK Arena &amp; AFK Journey</li>
+                        <li>
+                            <strong>League of Legends:</strong>
+                            <a href="https://op.gg/lol/summoners/eune/%E3%82%A2%E3%82%A4%E3%82%BB%E3%83%A0-UwU"
+                                target="_blank" rel="noopener">
+                                EUNE
+                            </a>
+                        </li>
+                        <li><strong>Battle.net:</strong> Diablo IV</li>
+                        <li>
+                            <strong>GitHub:</strong>
+                            <a href="https://github.com/ajsem1337" target="_blank" rel="noopener">ajsem1337</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="box">
+                    <h3>&#xF17A; Windows</h3>
+                    <ul>
+                        <li><strong>OS:</strong> Windows 11 Pro</li>
+                        <li><strong>ver:</strong> 24H2</li>
+                    </ul>
+
+                    <br />
+
+                    <h3>&#xF17C; Linux</h3>
+                    <ul>
+                        <li><strong>OS:</strong> I use Arch btw</li>
+                        <li><strong>DE:</strong> GNOME</li>
+                        <li><strong>FS:</strong> Btrfs</li>
+                        <li><strong>Bootloader:</strong> EFI Stub (wbudowane UEFI)</li>
+                        <li><strong>Terminal:</strong> Kitty + Fish</li>
+                    </ul>
+
+                    <br />
+
+                    <h3>&#xF0E8; Narzędzia</h3>
+                    <ul>
+                        <li><strong>Browser:</strong> Floorp / Brave</li>
+                        <li><strong>Editor:</strong> Visual Studio Code</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="playlist-box">
-                <img src="../assets/about/il_600x600.5402931816_ce2l.jpg" alt="Weeb Energy Jams" class="playlist-img">
-                <h3 class="icon-title">&#xF001; Weeb Energy Jams</h3>
-                <p>Pełne anime i dynamicznej energii. Idealne, gdy chcesz poczuć się jak w openingu swojego życia.</p>
-                <a href="https://music.youtube.com/playlist?list=PLymxlVvXRlC7H1dYke1xjhTfMm-dieize&si=k-wsGTexoOPGnymA"
-                    class="btn">&#xf0c1; Otwórz Playlistę</a>
+            <div class="playlist-container">
+                <div class="playlist-box">
+                    <img src="../assets/about/nature-mystery-unveiled-by-generative-ai-technology-generative-ai.jpg"
+                        alt="Grind &amp; Glory" class="playlist-img" />
+                    <h4 class="icon-title">&#xF001; Grind &amp; Glory</h4>
+                    <p>Idealne na wieczory przy RPG-ach i grindzie. Od metalowych kawałków po instrumentalne
+                        soundtracki.
+                    </p>
+                    <a href="https://music.youtube.com/playlist?list=PLymxlVvXRlC76cEmH6SgpeD7rU8IxyLYT&amp;si=1GZJji5a2axrLIFJ"
+                        class="btn" target="_blank" rel="noopener">&#xf0c1; Otwórz Playlistę</a>
+                </div>
+                <div class="playlist-box">
+                    <img src="../assets/about/il_600x600.5402931816_ce2l.jpg" alt="Weeb Energy Jams"
+                        class="playlist-img" />
+                    <h4 class="icon-title">&#xF001; Weeb Energy Jams</h4>
+                    <p>Pełne anime i dynamicznej energii. Idealne, gdy chcesz poczuć się jak w openingu swojego życia.
+                    </p>
+                    <a href="https://music.youtube.com/playlist?list=PLymxlVvXRlC7H1dYke1xjhTfMm-dieize&amp;si=k-wsGTexoOPGnymA"
+                        class="btn" target="_blank" rel="noopener">&#xf0c1; Otwórz Playlistę</a>
+                </div>
+                <div class="playlist-box">
+                    <img src="../assets/about/back-alleyway-at-night.jpg" alt="Recycle Bin Reloaded"
+                        class="playlist-img" />
+                    <h4 class="icon-title">&#xF001; Recycle Bin Reloaded</h4>
+                    <p>Mroczny, polski vibe. PRO8L3M na maxa, a także klasyczne rapowe brzmienia, które przywołują
+                        nostalgię.</p>
+                    <a href="https://music.youtube.com/playlist?list=PLymxlVvXRlC5EAnTFwIuxQ5vNDA-LIn-d&amp;si=3BJMIxpcPibAyL36"
+                        class="btn" target="_blank" rel="noopener">&#xf0c1; Otwórz Playlistę</a>
+                </div>
+                <div class="playlist-box">
+                    <img src="../assets/about/csm_Web_Exp_Lab_Klimakammer_f5fa03f9a4.png" alt="The Prototype"
+                        class="playlist-img" />
+                    <h4 class="icon-title">&#xF001; The Prototype</h4>
+                    <p>Playlista testowa – miejsce na eksperymenty i nowe odkrycia. Nic nie jest tu na stałe.</p>
+                    <a href="https://music.youtube.com/playlist?list=PLymxlVvXRlC4ZEajpkbGK-UsCBmbSmHpy&amp;si=JWdzjv_0MVQFpa9Z"
+                        class="btn" target="_blank" rel="noopener">&#xf0c1; Otwórz Playlistę</a>
+                </div>
             </div>
-            <div class="playlist-box">
-                <img src="../assets/about/back-alleyway-at-night.jpg" alt="Recycle Bin Reloaded" class="playlist-img">
-                <h3 class="icon-title">&#xF001; Recycle Bin Reloaded</h3>
-                <p>Mroczny, polski vibe. PRO8L3M na maxa, a także klasyczne rapowe brzmienia, które przywołują
-                    nostalgię.
-                </p>
-                <a href="https://music.youtube.com/playlist?list=PLymxlVvXRlC5EAnTFwIuxQ5vNDA-LIn-d&si=3BJMIxpcPibAyL36"
-                    class="btn">&#xf0c1; Otwórz Playlistę</a>
             </div>
-            <div class="playlist-box">
-                <img src="../assets/about/csm_Web_Exp_Lab_Klimakammer_f5fa03f9a4.png" alt="The Prototype"
-                    class="playlist-img">
-                <h3 class="icon-title">&#xF001; The Prototype</h3>
-                <p>Playlista testowa – miejsce na eksperymenty i nowe odkrycia. Nic nie jest tu na stałe.</p>
-                <a href="https://music.youtube.com/playlist?list=PLymxlVvXRlC4ZEajpkbGK-UsCBmbSmHpy&si=JWdzjv_0MVQFpa9Z"
-                    class="btn">&#xf0c1; Otwórz Playlistę</a>
-            </div>
-        </div>
-    </div>
-    <footer>
-        <p id="footer-text"></p>
-        <p>Contact: <a href="mailto:example@email.com">9yvzsrpli@mozmail.com</a> | Discord: <span>ajsem1337</span></p>
-    </footer>
-
-    <script src="main.js"></script>
+    </main>
+    <script src="../shared/nav.js"></script>
     <script src="../shared/theme.js"></script>
-
+    <script src="main.js"></script>
 </body>
 
 </html>

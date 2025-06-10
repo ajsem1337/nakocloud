@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Skin chwilowo offline</title>
+    <link rel="stylesheet" href="../shared/global.css" />
+</head>
+<body style="display:flex;flex-direction:column;justify-content:center;align-items:center;min-height:90vh;">
+    <h2>Skiny chwilowo offline</h2>
+    <p id="skinName" style="font-weight:bold;font-size:1.25em;"></p>
+    <p style="margin-top:1em;">Przepraszamy, pobieranie tymczasowo niedostępne.<br>Spróbuj ponownie później!</p>
+    <a href="/osu-skins/" style="margin-top:2em;">&larr; Wróć do galerii</a>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const name = params.get('name') || 'Nieznany skin';
+      document.getElementById('skinName').textContent = name;
+    </script>
+</body>
+</html>

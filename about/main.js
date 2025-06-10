@@ -1,14 +1,22 @@
-// script.js
-const footerTexts = [
-	'Made with blood, sweat, and Ctrl+Z. 💀',
-	'Crafted with pain, late nights, and way too much effort.',
-	'Built with tears of frustration and the sacrifice of my sanity.',
-	'Forged in the fires of chaos and polished with desperation.',
-	'Created with sleepless nights, broken dreams, and sheer stubbornness.',
-	'Developed with minimal hope and maximum suffering.',
-	'Pieced together with blood, broken code, and a sprinkle of regret.',
-	'Handcrafted with existential dread and questionable life choices.',
-]
+document.addEventListener('DOMContentLoaded', () => {
+	const toggles = document.querySelectorAll('.pc-toggle')
+	const pc1 = document.getElementById('pc1-specs')
+	const pc2 = document.getElementById('pc2-specs')
 
-const randomText = footerTexts[Math.floor(Math.random() * footerTexts.length)]
-document.getElementById('footer-text').innerText = randomText
+	toggles.forEach(toggle => {
+		toggle.addEventListener('click', () => {
+			// Usuń klasę .active z obu toggle'ów, potem dodaj tylko do klikniętego
+			toggles.forEach(t => t.classList.remove('active'))
+			toggle.classList.add('active')
+
+			// Pokaż/ukryj odpowiednie specyfikacje
+			if (toggle.dataset.pc === 'pc1') {
+				pc1.style.display = 'block'
+				pc2.style.display = 'none'
+			} else {
+				pc1.style.display = 'none'
+				pc2.style.display = 'block'
+			}
+		})
+	})
+})

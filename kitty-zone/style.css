@@ -1,22 +1,16 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	outline: none;
-}
-
 #kitku {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 30px;
+	min-height: 360px; /* lub inna wysokość, żeby nie skakało przy ładowaniu */
 }
 
-#kitku img {
-	max-height: 85vh;
-	min-height: 50vh;
-	object-fit: contain;
+#kot {
+	max-width: 98vw;
+	max-height: 480px;
 	border-radius: var(--box-radius);
 	box-shadow: var(--box-shadow);
-	transition: opacity 0.3s ease;
+	transition: box-shadow 0.22s, transform 0.18s;
+	object-fit: contain;
+	background: #2221;
 }
